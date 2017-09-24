@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 
 import os
 from decouple import config
-from dj-database_url import parse as dburl
+from dj_database_url import parse as dburl
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -23,6 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 # SECRET_KEY = 'l^qbm@tyo@l171u=ob#h3wje-1*exs2(#izq%l6wpokb6h2_j1'
 SECRET_KEY =config('SECRET_KEY')
+# SECRET_KEY='l^qbm@tyo@l171u=ob#h3wje-1*exs2(#izq%l6wpokb6h2_j1'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG',default=False,clast=bool)
 STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
